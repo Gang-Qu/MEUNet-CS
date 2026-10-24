@@ -12,7 +12,7 @@ MEUNet is a measurement-enhanced unfolding network for image compressed sensing.
 
 ## Installation
 
-The reference environment is Linux with an NVIDIA GPU, Python 3.13.2, PyTorch 2.6.0, and the CUDA 12.6 PyTorch build. Package versions in `requirement.txt` are taken from the working `SPI` environment.
+The reference environment is Linux with an NVIDIA GPU, Python 3.13.2, PyTorch 2.6.0, and the CUDA 12.6 PyTorch build. 
 
 ```bash
 git clone https://github.com/Gang-Qu/MEUNet-CS.git
@@ -23,7 +23,6 @@ python -m pip install --upgrade pip
 python -m pip install -r requirement.txt
 ```
 
-An NVIDIA driver compatible with the CUDA 12.6 PyTorch build is required. Use Python 3.13 with the pinned packages; NumPy 2.1.3 is not intended for Python 3.14.
 
 ## Repository Structure
 
@@ -43,13 +42,9 @@ MEUNet-CS/
 
 Prepare the training images (BSDS400) and benchmark images (e.g., Set11 or CBSD68) in separate directories. Datasets are not included. Supply the directories using `--train_data_path` and `--benchmark_path`.
 
-The supplied loaders use the Y channel of OpenCV's YCrCb conversion. The evaluation script supports images matching `args.size`, or images with twice that height and width, which are split into four patches.
 
 ## Pretrained Model and Testing
 
-The included `Weight/epoch_306.pth` checkpoint uses `size=[256, 256]`, `meas_size=[81, 81]`, and seven unfolding stages. Its effective sampling ratio is `81 * 81 / (256 * 256)`, approximately 10%.
-
-**Before testing this checkpoint, change the `--meas_size` default in `opts.py` from `[128, 128]` to `[81, 81]`.** Keep the other architecture settings at their defaults. The current argument parser does not parse list-valued options from the command line; edit `opts.py` for image sizes, measurement sizes, and block lists. Changing `--cr` alone does not change the sensing matrix dimensions.
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 python test.py \
