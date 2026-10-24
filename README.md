@@ -85,6 +85,3 @@ Checkpoints and logs are saved under `weights/` and `log/`. Set `--pretrained_mo
 }
 ```
 
-## Contact
-
-For questions, please open a GitHub issue or contact [Gang Qu](mailto:qugang@westlake.edu.cn).
