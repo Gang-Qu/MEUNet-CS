@@ -12,7 +12,7 @@ def parse_args():
     parser.add_argument('--decoder_type', default='E2E-DUNet-A1001', type=str, help='reconstruction network type')
     parser.add_argument('--cr', default=0.1, type=float)  # 0.01, 0.04, 0.10, 0.25, 0.5  For 256*256 # [26,26], [51,51], [81,81], [128,128], [181,181] 
     parser.add_argument('--size', default=[256*1, 256*1])   ## [321, 481]  [256, 256]
-    parser.add_argument('--meas_size', default=[128, 128])  ## For 321*481  [39,39], [78,79], [124,124], [196,197], [278,278]
+    parser.add_argument('--meas_size', default=[81, 81])  ## For 321*481  [39,39], [78,79], [124,124], [196,197], [278,278]
     parser.add_argument('--matrix_train', default=True, type=bool)
     parser.add_argument('--lr', default=0.0001, type=float)
     parser.add_argument('--color_channels', default=1, type=int)
