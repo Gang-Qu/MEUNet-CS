@@ -1,0 +1,11 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+.vscode/
+log/
+logs/
+results/
+test_results/
+masks/
+weights/
