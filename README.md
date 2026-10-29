@@ -1,6 +1,6 @@
 # MEUNet-CS (AAAI 2026)
 
-Official PyTorch implementation of **Breaking Measurement Barriers: From Compressed Sensing to Deep Reconstruction**.
+PyTorch implementation of **Breaking Measurement Barriers: From Compressed Sensing to Deep Reconstruction**.
 
 Gang Qu, Ping Wang, Siming Zheng, and Xin Yuan.
 
@@ -28,8 +28,8 @@ python -m pip install -r requirement.txt
 
 ```text
 MEUNet-CS/
-  model/MEUNet.py       # Network architecture
-  Weight/epoch_306.pth # Pretrained checkpoint at approximately 10% sampling
+  model/MEUNet.py     # Network architecture
+  Weight              # Pretrained checkpoint at approximately 10% sampling
   opts.py             # Model, dataset, and optimization settings
   train.py            # Training
   test.py             # Evaluation and reconstruction image export
